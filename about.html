@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About | Rehema Children’s Home</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="nav-container">
+      <img src="assets/logo.png" alt="Rehema Logo" class="logo">
+      <nav>
+        <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html" class="active">About</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="#">Programs</a></li>
+          <li><a href="#">Contact</a></li
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="about-hero">
+    <div class="about-hero-overlay"></div>
+    <div class="about-hero-content">
+      <h1>Guided by Love, Rooted in Faith</h1>
+      <p>At Rehema Children’s Home, every heartbeat carries a prayer, every smile a story of hope.</p>
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <main class="about-wrapper">
+    <div class="about-text">
+      <h2>Our Story</h2>
+      <p>
+        Rehema Children’s Home is a place where love meets purpose. Every child here is seen, known, and cared for. Beyond food and shelter, we provide warmth, guidance, and the assurance that they are deeply loved in Christ.
+      </p>
+
+      <p>
+        Our mission is to restore dignity and inspire hope. The laughter in our halls is a testament to God’s grace, and every shared meal reminds us that we are one family, bound by love and faith.
+      </p>
+
+      <p>
+        We are not just a home. We are a community of hearts working together.</p>
+    </div>
+    <div class="about-image">
+      <img src="assets/images/aa.jpg" alt="Children at Rehema Home">
+    </div>
+  </main>
+
+  <!-- Faith Quote -->
+  <section class="faith-section">
+    <blockquote>
+      “Let all that you do be done in love.”<br>
+      <span>— 1 Corinthians 16:14</span>
+    </blockquote>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-container">
+      <p>© <span id="year"></span> Rehema Children’s Home | Built with Love & Faith</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

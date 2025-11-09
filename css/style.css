@@ -1,0 +1,477 @@
+/* =========================
+   General Styles
+========================= */
+body {
+  margin: 0;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  color: #002f6c;
+  line-height: 1.6;
+  background-color: #fafafa;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* =========================
+   Header
+========================= */
+header {
+  background: white;
+  padding: 0.8rem 0;
+  border-bottom: 2px solid #e6e6e6;
+}
+
+.nav-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1.8rem;
+  margin: 0;
+  padding: 0;
+}
+
+nav a {
+  text-decoration: none;
+  color: #004aad;
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: #009fe3;
+}
+
+/* =========================
+   Hero Section (Index)
+========================= */
+.hero {
+  position: relative;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  overflow: hidden;
+}
+
+.hero-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -2;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(25, 34, 44, 0.6);
+  z-index: -1;
+}
+
+.hero-content {
+  max-width: 700px;
+  padding: 1.5rem;
+}
+
+.hero h1 {
+  font-size: 2.6rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+/* =========================
+   Mission Section
+========================= */
+.mission {
+  background: #fff;
+  padding: 2.5rem 0;
+  text-align: center;
+}
+
+.mission h2 {
+  color: #004aad;
+  border-left: 5px solid #009fe3;
+  display: inline-block;
+  padding-left: 10px;
+  margin-bottom: 1rem;
+}
+
+/* =========================
+   Programs Section
+========================= */
+.programs {
+  background: #f7f9fc;
+  padding: 2.5rem 0;
+  text-align: center;
+}
+
+.programs h2 {
+  color: #004aad;
+  border-left: 5px solid #009fe3;
+  display: inline-block;
+  padding-left: 10px;
+  margin-bottom: 2rem;
+}
+
+/* =========================
+   Carousel
+========================= */
+.carousel-container {
+  overflow: hidden;
+  max-width: 1000px;
+  margin: auto;
+  padding: 1rem 0;
+}
+
+#program-carousel {
+  display: flex;
+  gap: 1rem;
+  overflow-x: hidden;
+}
+
+.carousel-card {
+  flex: 0 0 30%;
+  background: white;
+  padding: 1.2rem;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  text-align: center;
+  min-width: 200px;
+}
+
+.carousel-card h3 {
+  color: #004aad;
+  font-size: 1.1rem;
+}
+
+/* =========================
+   Footer
+========================= */
+footer {
+  background: #004aad;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
+  font-size: 0.95rem;
+}
+
+/* =========================
+   About Page Styles
+========================= */
+
+/* About Hero */
+.about-hero {
+  position: relative;
+  height: 25vh;
+  background: url('../assets/images/about-hero.jpg') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+
+.about-hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 47, 108, 0.55);
+}
+
+.about-hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 650px;
+  padding: 1rem;
+}
+
+.about-hero-content h1 {
+  font-size: 2.4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+}
+
+.about-hero-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+/* Story Section */
+.about-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2.5rem;
+  padding: 2rem 8%; /* reduced from 3rem to 2rem */
+  min-height: 50vh; /* slightly taller than about hero (55vh) */
+  background: #fff;
+}
+
+.about-text {
+  flex: 1;
+}
+
+.about-text h2 {
+  color: #004aad;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  border-left: 5px solid #009fe3;
+  padding-left: 10px;
+}
+
+.about-text p {
+  color: #333;
+  line-height: 1.7;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.about-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.about-image img {
+  width: 200%;
+  max-width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Faith Section */
+.faith-section {
+  background: #f7f9fc;
+  text-align: center;
+  padding: 2.5rem 1rem;
+  color: #002f6c;
+  font-style: italic;
+  min-height: 10vh;
+}
+
+.faith-section blockquote {
+  font-size: 1.3rem;
+  margin: 0;
+}
+
+.faith-section span {
+  display: block;
+  margin-top: 0.5rem;
+  color: #009fe3;
+  font-style: normal;
+  font-weight: 600;
+}
+
+/* Gallery */
+.team-gallery {
+  text-align: center;
+  padding: 3rem 0;
+}
+
+.team-gallery h2 {
+  color: #004aad;
+  margin-bottom: 1.5rem;
+}
+
+.gallery {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.gallery-item img {
+  width: 210px;
+  height: 210px;
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.05);
+}
+
+/* =========================
+   Responsive
+========================= */
+@media (max-width: 900px) {
+  .about-wrapper {
+    flex-direction: column;
+    text-align: center;
+    padding: 2rem 6%;
+  }
+
+  .about-image img {
+    width: 90%;
+    margin-top: 1rem;
+  }
+
+  .about-text h2 {
+    text-align: center;
+    border-left: none;
+    border-bottom: 4px solid #009fe3;
+    display: inline-block;
+    padding-bottom: 5px;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel-card {
+    flex: 0 0 70%;
+  }
+
+  .hero h1 {
+    font-size: 2.1rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
+/* Carousel Images Spin & Pop Effect */
+#program-carousel img {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transform-origin: center center;
+}
+
+#program-carousel img:hover {
+  transform: scale(1.1) rotateY(15deg);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+  cursor: pointer;
+}
+
+/* Carousel Cards */
+.carousel-card {
+  flex: 0 0 200px; /* fixed width */
+  height: 200px;   /* fixed height */
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  overflow: hidden; /* ensures images don't overflow the card */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
+}
+
+/* Images inside cards */
+.carousel-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills card while keeping aspect ratio */
+  transition: transform 0.5s ease;
+}
+
+/* On hover, reveal full image by scaling and slight translation */
+.carousel-card:hover img {
+  transform: scale(1.2); /* zoom in to reveal edges */
+  cursor: pointer;
+}
+
+
+/* Contact Section */
+.contact-section {
+  background: #f7f9fc;
+  padding: 3rem 0;
+  text-align: center;
+}
+
+.contact-section h1 {
+  color: #004aad;
+  margin-bottom: 0.5rem;
+}
+
+.contact-section p {
+  color: #002f6c;
+  margin-bottom: 2rem;
+  font-size: 1.1rem;
+}
+
+/* Contact Cards Layout */
+.contact-cards {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Individual Card Style */
+.contact-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  flex: 1 1 300px;
+  max-width: 400px;
+  text-align: left;
+}
+
+/* Form Fields */
+.contact-card input,
+.contact-card textarea {
+  width: 100%;
+  padding: 0.8rem;
+  margin-bottom: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 1rem;
+}
+
+.contact-card button.btn.primary {
+  background: #004aad;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.contact-card button.btn.primary:hover {
+  background: #009fe3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-cards {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
