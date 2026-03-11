@@ -7,47 +7,204 @@ media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
-
+  # Pages Collection - Uses JSON files for content
   - name: "pages"
     label: "Pages"
     files:
-      - file: "index.html"
-        label: "Home Page"
+      - label: "Home"
         name: "home"
+        file: "content/home.json"
         fields:
-          - {label: "Page Title", name: "title", widget: "string"}
-          - {label: "Hero Image", name: "hero_image", widget: "image"}
-          - {label: "Hero Caption", name: "hero_caption", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "Sections"
+            name: "sections"
+            widget: "list"
+            types:
+              - label: "Hero Section"
+                name: "hero"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "hero" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Subtitle", name: "subtitle", widget: "text" }
+                  - { label: "Video URL", name: "videoUrl", widget: "string", required: false }
+                  - { label: "Background Image", name: "backgroundImage", widget: "image", required: false }
+              
+              - label: "Text Section"
+                name: "text"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "text" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Content", name: "content", widget: "markdown" }
+              
+              - label: "Image Section"
+                name: "image"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "image" }
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Caption", name: "caption", widget: "string", required: false }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+              
+              - label: "Two Column Section"
+                name: "two-column"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "two-column" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Text Content", name: "textContent", widget: "markdown" }
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
+              
+              - label: "Quote Section"
+                name: "quote"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "quote" }
+                  - { label: "Quote", name: "quote", widget: "text" }
+                  - { label: "Citation", name: "citation", widget: "string" }
+              
+              - label: "Programs Section"
+                name: "programs"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "programs" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - label: "Programs"
+                    name: "programs"
+                    widget: "list"
+                    fields:
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Description", name: "description", widget: "text" }
 
-      - file: "about.html"
-        label: "About Page"
+      - label: "About"
         name: "about"
+        file: "content/about.json"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "Sections"
+            name: "sections"
+            widget: "list"
+            types:
+              - label: "Hero Section"
+                name: "hero"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "hero" }
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Subtitle", name: "subtitle", widget: "text" }
+                  - { label: "Video URL", name: "videoUrl", widget: "string", required: false }
+                  - { label: "Background Image", name: "backgroundImage", widget: "image", required: false }
+              
+              - label: "Text Section"
+                name: "text"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "text" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Content", name: "content", widget: "markdown" }
+              
+              - label: "Image Section"
+                name: "image"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "image" }
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Caption", name: "caption", widget: "string", required: false }
+                  - { label: "Alt Text", name: "alt", widget: "string" }
+              
+              - label: "Two Column Section"
+                name: "two-column"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "two-column" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Text Content", name: "textContent", widget: "markdown" }
+                  - { label: "Image", name: "image", widget: "image" }
+                  - { label: "Image Alt Text", name: "imageAlt", widget: "string" }
+              
+              - label: "Quote Section"
+                name: "quote"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "quote" }
+                  - { label: "Quote", name: "quote", widget: "text" }
+                  - { label: "Citation", name: "citation", widget: "string" }
 
-      - file: "contact.html"
-        label: "Contact Page"
+      - label: "Contact"
         name: "contact"
+        file: "content/contact.json"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "Sections"
+            name: "sections"
+            widget: "list"
+            types:
+              - label: "Contact Section"
+                name: "contact"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "contact" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Subtitle", name: "subtitle", widget: "string" }
+                  - { label: "Address", name: "address", widget: "string" }
+                  - { label: "Phone", name: "phone", widget: "string" }
+                  - { label: "Email", name: "email", widget: "string" }
+              
+              - label: "Text Section"
+                name: "text"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "text" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Content", name: "content", widget: "markdown" }
 
-      - file: "donate.html"
-        label: "Donate Page"
+      - label: "Donate"
         name: "donate"
+        file: "content/donate.json"
         fields:
-          - {label: "Title", name: "title", widget: "string"}
-          - {label: "Body", name: "body", widget: "markdown"}
+          - { label: "Title", name: "title", widget: "string" }
+          - label: "Sections"
+            name: "sections"
+            widget: "list"
+            types:
+              - label: "Text Section"
+                name: "text"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "text" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - { label: "Content", name: "content", widget: "markdown" }
+              
+              - label: "Donation Options"
+                name: "donation-options"
+                widget: "object"
+                fields:
+                  - { label: "Type", name: "type", widget: "hidden", default: "donation-options" }
+                  - { label: "Heading", name: "heading", widget: "string" }
+                  - label: "Options"
+                    name: "options"
+                    widget: "list"
+                    fields:
+                      - { label: "Title", name: "title", widget: "string" }
+                      - { label: "Description", name: "description", widget: "text" }
+                      - { label: "Button Text", name: "buttonText", widget: "string" }
+                      - { label: "Button Link", name: "buttonLink", widget: "string" }
 
-      - file: "gallery.html"
-        label: "Gallery Page"
+  # Gallery Collection
+  - name: "gallery"
+    label: "Gallery"
+    files:
+      - label: "Gallery Images"
         name: "gallery"
+        file: "content/gallery.json"
         fields:
-          - label: "Gallery Images"
-            name: "gallery"
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "Subtitle", name: "subtitle", widget: "string" }
+          - label: "Images"
+            name: "images"
             widget: "list"
             fields:
-              - {label: "Image", name: "image", widget: "image"}
-              - {label: "Caption", name: "caption", widget: "string"}
+              - { label: "Image", name: "image", widget: "image" }
+              - { label: "Caption", name: "caption", widget: "string" }

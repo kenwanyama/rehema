@@ -1,0 +1,39 @@
+{
+  "title": "Rehema Children's Home",
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Every child deserves a future.",
+      "subtitle": "Together, we can build hope and provide care for vulnerable children.",
+      "videoUrl": "/assets/videos/rehema.mp4",
+      "backgroundImage": ""
+    },
+    {
+      "type": "text",
+      "heading": "Our Mission",
+      "content": "To provide a loving home where children are nurtured, cared for, and guided in faith, helping them grow into strong, independent, and God-centered lives."
+    },
+    {
+      "type": "programs",
+      "heading": "Programs",
+      "programs": [
+        {
+          "title": "Faith & Spiritual Growth",
+          "description": "Nurturing hearts through prayer, guidance, and hope in God."
+        },
+        {
+          "title": "Shelter & Care",
+          "description": "A safe, loving home with nutritious meals and constant care."
+        },
+        {
+          "title": "Education",
+          "description": "Learning support and life skills to help children thrive."
+        },
+        {
+          "title": "Community & Families",
+          "description": "Connecting children with the wider community."
+        }
+      ]
+    }
+  ]
+}

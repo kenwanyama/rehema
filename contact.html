@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Contact | Rehema Children’s Home</title>
+  <title>Contact | Rehema Children's Home</title>
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -16,54 +16,23 @@
         <ul>
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
-          <li><a href="programs.html">Programs</a></li>
           <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="donate.html">Donate</a></li>
           <li><a href="contact.html" class="active">Contact</a></li>
         </ul>
       </nav>
     </div>
   </header>
 
-  <!-- Contact Section -->
-  <section class="contact-section">
-    <div class="container">
-      <h1>Contact Us</h1>
-      <p>We’d love to hear from you</p>
-
-      <div class="contact-cards">
-        <!-- Form Card -->
-        <div class="contact-card">
-          <form id="contactForm" class="contact-form" action="#" method="post" novalidate>
-            <label for="name">Your Name</label>
-            <input id="name" name="name" type="text" required>
-
-            <label for="email">Email</label>
-            <input id="email" name="email" type="email" required>
-
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" required></textarea>
-
-            <button type="submit" class="btn primary">Send Message</button>
-            <p id="formStatus" class="form-status" aria-live="polite"></p>
-          </form>
-        </div>
-
-        <!-- Contact Info Card -->
-        <div class="contact-card">
-          <h2>Visit or Call</h2>
-          <p><strong>Address:</strong> Kenya</p>
-          <p><strong>Phone:</strong> +254 7123-4567</p>
-          <p><strong>Email:</strong> info@childrenshome.example</p>
-        </div>
-      </div>
-    </div>
-  </section>
+  <!-- Content will be dynamically loaded here -->
+  <div id="content-container"></div>
 
   <!-- Footer -->
   <footer>
-    <p>&copy; <span id="year"></span> Rehema Children’s Home</p>
+    <p>&copy; <span id="year"></span> Rehema Children's Home</p>
   </footer>
 
+  <script src="js/content-renderer.js"></script>
   <script src="js/script.js"></script>
 </body>
 </html>

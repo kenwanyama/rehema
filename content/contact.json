@@ -1,0 +1,13 @@
+{
+  "title": "Contact | Rehema Children's Home",
+  "sections": [
+    {
+      "type": "contact",
+      "heading": "Contact Us",
+      "subtitle": "We'd love to hear from you",
+      "address": "Kenya",
+      "phone": "+254 7123-4567",
+      "email": "info@childrenshome.example"
+    }
+  ]
+}

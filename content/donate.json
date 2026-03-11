@@ -1,0 +1,39 @@
+{
+  "title": "Donate — Hope Children's Home",
+  "sections": [
+    {
+      "type": "text",
+      "heading": "Support our work",
+      "content": "Your donations provide food, schooling, medical care and a safe home."
+    },
+    {
+      "type": "donation-options",
+      "heading": "Ways to give",
+      "options": [
+        {
+          "title": "One-time donation",
+          "description": "Make a single gift to support urgent needs.",
+          "buttonText": "Donate $25",
+          "buttonLink": "#"
+        },
+        {
+          "title": "Monthly support",
+          "description": "Provide steady support by giving monthly.",
+          "buttonText": "Start monthly",
+          "buttonLink": "#"
+        },
+        {
+          "title": "Gifts in kind",
+          "description": "We welcome clothing, books, school supplies and food.",
+          "buttonText": "Contact us",
+          "buttonLink": "contact.html"
+        }
+      ]
+    },
+    {
+      "type": "text",
+      "heading": "Bank details / Payment",
+      "content": "Bank: Example Bank • Account: 12345678 • SWIFT: EXAMP\n\n(Replace the above with your real payment details; for safety, ensure your donation flows through a secure payment processor.)"
+    }
+  ]
+}

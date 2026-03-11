@@ -1,0 +1,26 @@
+{
+  "title": "Gallery | Rehema Children's Home",
+  "subtitle": "Moments of joy, learning, and community at Rehema Children's Home",
+  "images": [
+    {
+      "image": "/assets/images/eating.jpg",
+      "caption": "Children enjoying a meal together"
+    },
+    {
+      "image": "/assets/images/kids.jpg",
+      "caption": "Happy moments at the home"
+    },
+    {
+      "image": "/assets/images/johnny.jpg",
+      "caption": "Joyful playtime"
+    },
+    {
+      "image": "/assets/images/sister.jpg",
+      "caption": "Bonding and care"
+    },
+    {
+      "image": "/assets/images/eating.jpg",
+      "caption": "Sharing meals with love"
+    }
+  ]
+}

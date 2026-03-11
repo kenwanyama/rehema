@@ -1,0 +1,23 @@
+{
+  "title": "About | Rehema Children's Home",
+  "sections": [
+    {
+      "type": "hero",
+      "title": "Guided by Love, Rooted in Faith",
+      "subtitle": "At Rehema Children's Home, every heartbeat carries a prayer, every smile a story of hope.",
+      "backgroundImage": ""
+    },
+    {
+      "type": "two-column",
+      "heading": "Our Story",
+      "textContent": "Rehema Children's Home is a place where love meets purpose. Every child here is seen, known, and cared for. Beyond food and shelter, we provide warmth, guidance, and the assurance that they are deeply loved in Christ.\n\nOur mission is to restore dignity and inspire hope. The laughter in our halls is a testament to God's grace, and every shared meal reminds us that we are one family, bound by love and faith.\n\nWe are not just a home. We are a community of hearts working together.",
+      "image": "/assets/images/aa.jpg",
+      "imageAlt": "Children at Rehema Home"
+    },
+    {
+      "type": "quote",
+      "quote": "Let all that you do be done in love.",
+      "citation": "1 Corinthians 16:14"
+    }
+  ]
+}
