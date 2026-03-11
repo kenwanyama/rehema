@@ -6,7 +6,14 @@
       "title": "Every child deserves a future.",
       "subtitle": "Together, we can build hope and provide care for vulnerable children.",
       "videoUrl": "/assets/videos/rehema.mp4",
-      "backgroundImage": ""
+      "images": [
+        "/assets/images/hero1.jpg",
+        "/assets/images/hero2.jpg",
+        "/assets/images/hero3.jpg",
+        "/assets/images/hero4.jpg",
+        "/assets/images/hero5.jpg",
+        "/assets/images/hero6.jpg"
+    ]
     },
     {
       "type": "text",

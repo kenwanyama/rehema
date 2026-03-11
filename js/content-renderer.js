@@ -65,37 +65,32 @@ class ContentRenderer {
   }
 
   renderHeroSection(section) {
-    const heroSection = document.createElement('section');
-    
-    // Determine if this is the about page hero or home page hero
-    if (section.videoUrl) {
-      // Home page hero with video
-      heroSection.className = 'hero';
-      heroSection.innerHTML = `
-        <video autoplay muted loop playsinline class="hero-video">
-          <source src="${section.videoUrl}" type="video/mp4">
-          Your browser does not support the video tag.
-        </video>
-        <div class="hero-overlay"></div>
-        <div class="hero-content">
-          <h1>${this.escapeHtml(section.title)}</h1>
-          <p>${this.escapeHtml(section.subtitle)}</p>
-        </div>
-      `;
-    } else {
-      // About page hero
-      heroSection.className = 'about-hero';
-      heroSection.innerHTML = `
-        <div class="about-hero-overlay"></div>
-        <div class="about-hero-content">
-          <h1>${this.escapeHtml(section.title)}</h1>
-          <p>${this.escapeHtml(section.subtitle)}</p>
-        </div>
-      `;
-    }
-    
-    return heroSection;
+  const heroSection = document.createElement('section');
+  heroSection.className = 'hero';
+
+  let imageGrid = '';
+
+  if (section.images) {
+    imageGrid = section.images.map(img =>
+      `<div class="hero-image" style="background-image:url('${img}')"></div>`
+    ).join('');
   }
+
+  heroSection.innerHTML = `
+    <div class="hero-grid">
+      ${imageGrid}
+    </div>
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <h1>${this.escapeHtml(section.title)}</h1>
+      <p>${this.escapeHtml(section.subtitle)}</p>
+    </div>
+  `;
+
+  return heroSection;
+}
 
   renderTextSection(section) {
     const textSection = document.createElement('section');
@@ -317,28 +312,43 @@ class GalleryRenderer {
 // Auto-initialize based on page
 document.addEventListener('DOMContentLoaded', async () => {
   const path = window.location.pathname;
-  const page = path.split('/').pop() || 'index.html';
+  let page = window.location.pathname.split('/').pop();
 
-  let contentFile = '';
-  let containerId = 'content-container';
+  if (!page || page === "") {
+    page = "index";
+  }
 
-  // Determine which content file to load
-  if (page === 'index.html' || page === '') {
-    contentFile = 'content/home.json';
-  } else if (page === 'about.html') {
-    contentFile = 'content/about.json';
-  } else if (page === 'contact.html') {
-    contentFile = 'content/contact.json';
-  } else if (page === 'donate.html') {
-    contentFile = 'content/donate.json';
-    containerId = 'donate-content';
-  } else if (page === 'gallery.html') {
-    // Gallery uses special renderer
-    const galleryRenderer = await new GalleryRenderer('content/gallery.json').init();
-    if (galleryRenderer) {
-      galleryRenderer.renderGallery('gallery-content');
-    }
-    return;
+  page = page.replace(".html","");
+
+  let contentFile = "";
+  let containerId = "content-container";
+
+  switch(page) {
+    case "index":
+      contentFile = "content/home.json";
+      break;
+
+    case "about":
+      contentFile = "content/about.json";
+      break;
+
+    case "contact":
+      contentFile = "content/contact.json";
+      break;
+
+    case "donate":
+      contentFile = "content/donate.json";
+      containerId = "donate-content";
+      break;
+
+    case "gallery":
+      const galleryRenderer =
+        await new GalleryRenderer("content/gallery.json").init();
+
+      if (galleryRenderer) {
+        galleryRenderer.renderGallery("gallery-content");
+      }
+      return;
   }
 
   // Render standard pages
