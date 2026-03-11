@@ -7,14 +7,47 @@ media_folder: "images/uploads"
 public_folder: "/images/uploads"
 
 collections:
+
   - name: "pages"
     label: "Pages"
     files:
       - file: "index.html"
-        label: "Homepage"
-        name: "homepage"
+        label: "Home Page"
+        name: "home"
+        fields:
+          - {label: "Page Title", name: "title", widget: "string"}
+          - {label: "Hero Image", name: "hero_image", widget: "image"}
+          - {label: "Hero Caption", name: "hero_caption", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+
+      - file: "about.html"
+        label: "About Page"
+        name: "about"
         fields:
           - {label: "Title", name: "title", widget: "string"}
-          - {label: "Main Image", name: "main_image", widget: "image"}
-          - {label: "Caption", name: "caption", widget: "string"}
           - {label: "Body", name: "body", widget: "markdown"}
+
+      - file: "contact.html"
+        label: "Contact Page"
+        name: "contact"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+
+      - file: "donate.html"
+        label: "Donate Page"
+        name: "donate"
+        fields:
+          - {label: "Title", name: "title", widget: "string"}
+          - {label: "Body", name: "body", widget: "markdown"}
+
+      - file: "gallery.html"
+        label: "Gallery Page"
+        name: "gallery"
+        fields:
+          - label: "Gallery Images"
+            name: "gallery"
+            widget: "list"
+            fields:
+              - {label: "Image", name: "image", widget: "image"}
+              - {label: "Caption", name: "caption", widget: "string"}
